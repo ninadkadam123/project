@@ -1,0 +1,19 @@
+package com.app.pojo;
+
+public class Qualification {
+	private String tenBoard,tenSchool;
+	private double tenPer;
+	private Integer tenPassYr;
+	private String twelveBoard,twelveClg;
+	private double twelvePer;
+	private Integer twelvePassYr;
+	private String dplUnivercity,dplCollege;
+	private double sem1PerDpl,sem2PerDpl,sem3PerDpl,sem4PerDpl,sem5PerDpl,sem6PerDpl;
+	private double dplPer;
+	private Integer dplPassYear,dplBacklogs;
+	private String dgrUni,dgrclg;
+	private double sem1PerDgr,sem2PerDgr,sem3PerDgr,sem4PerDgr,sem5PerDgr,sem6PerDgr,sem7PerDgr,sem8PerDgr;
+	private double dgrPer;
+	private Integer dgrPassYr,dgrBacklogs;
+	
+}

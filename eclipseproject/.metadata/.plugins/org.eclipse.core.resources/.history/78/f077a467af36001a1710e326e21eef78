@@ -1,0 +1,281 @@
+package com.app.pojo;
+
+import javax.persistence.*;
+
+@Embeddable
+public class Qualification {
+	private String tenBoard,tenSchool;
+	private double tenPer;
+	private Integer tenPassYr;
+	private String twelveBoard,twelveClg;
+	private double twelvePer;
+	private Integer twelvePassYr;
+	private String dplUnivercity,dplCollege;
+	private double sem1PerDpl,sem2PerDpl,sem3PerDpl,sem4PerDpl,sem5PerDpl,sem6PerDpl;
+	private double dplPer;
+	private Integer dplPassYear,dplBacklogs;
+	private String dgrUni,dgrclg;
+	private double sem1PerDgr,sem2PerDgr,sem3PerDgr,sem4PerDgr,sem5PerDgr,sem6PerDgr,sem7PerDgr,sem8PerDgr;
+	private double dgrPer;
+	private Integer dgrPassYr,dgrBacklogs,yrGap;
+	
+	public Qualification()
+	{
+		
+	}
+	
+	@Column(name = "board_name_10", length = 100)
+	public String getTenBoard() {
+		return tenBoard;
+	}
+	public void setTenBoard(String tenBoard) {
+		this.tenBoard = tenBoard;
+	}
+	
+	@Column(length = 100)
+	public String getTenSchool() {
+		return tenSchool;
+	}
+	public void setTenSchool(String tenSchool) {
+		this.tenSchool = tenSchool;
+	}
+	
+	
+	public double getTenPer() {
+		return tenPer;
+	}
+	public void setTenPer(double tenPer) {
+		this.tenPer = tenPer;
+	}
+	
+	
+	public Integer getTenPassYr() {
+		return tenPassYr;
+	}
+	public void setTenPassYr(Integer tenPassYr) {
+		this.tenPassYr = tenPassYr;
+	}
+	
+	@Column(length = 100)
+	public String getTwelveBoard() {
+		return twelveBoard;
+	}
+	
+	public void setTwelveBoard(String twelveBoard) {
+		this.twelveBoard = twelveBoard;
+	}
+	
+	@Column(length = 100)
+	public String getTwelveClg() {
+		return twelveClg;
+	}
+	public void setTwelveClg(String twelveClg) {
+		this.twelveClg = twelveClg;
+	}
+	
+	@Column(length = 100)
+	public double getTwelvePer() {
+		return twelvePer;
+	}
+	public void setTwelvePer(double twelvePer) {
+		this.twelvePer = twelvePer;
+	}
+	
+	
+	public Integer getTwelvePassYr() {
+		return twelvePassYr;
+	}
+	public void setTwelvePassYr(Integer twelvePassYr) {
+		this.twelvePassYr = twelvePassYr;
+	}
+	
+	@Column(length = 100)
+	public String getDplUnivercity() {
+		return dplUnivercity;
+	}
+	public void setDplUnivercity(String dplUnivercity) {
+		this.dplUnivercity = dplUnivercity;
+	}
+	
+	@Column(length = 100)
+	public String getDplCollege() {
+		return dplCollege;
+	}
+	public void setDplCollege(String dplCollege) {
+		this.dplCollege = dplCollege;
+	}
+	
+	
+	public double getSem1PerDpl() {
+		return sem1PerDpl;
+	}
+	public void setSem1PerDpl(double sem1PerDpl) {
+		this.sem1PerDpl = sem1PerDpl;
+	}
+	
+	public double getSem2PerDpl() {
+		return sem2PerDpl;
+	}
+	public void setSem2PerDpl(double sem2PerDpl) {
+		this.sem2PerDpl = sem2PerDpl;
+	}
+	public double getSem3PerDpl() {
+		return sem3PerDpl;
+	}
+	public void setSem3PerDpl(double sem3PerDpl) {
+		this.sem3PerDpl = sem3PerDpl;
+	}
+	public double getSem4PerDpl() {
+		return sem4PerDpl;
+	}
+	public void setSem4PerDpl(double sem4PerDpl) {
+		this.sem4PerDpl = sem4PerDpl;
+	}
+	public double getSem5PerDpl() {
+		return sem5PerDpl;
+	}
+	public void setSem5PerDpl(double sem5PerDpl) {
+		this.sem5PerDpl = sem5PerDpl;
+	}
+	public double getSem6PerDpl() {
+		return sem6PerDpl;
+	}
+	public void setSem6PerDpl(double sem6PerDpl) {
+		this.sem6PerDpl = sem6PerDpl;
+	}
+	public double getDplPer() {
+		return dplPer;
+	}
+	public void setDplPer(double dplPer) {
+		this.dplPer = dplPer;
+	}
+	public Integer getDplPassYear() {
+		return dplPassYear;
+	}
+	public void setDplPassYear(Integer dplPassYear) {
+		this.dplPassYear = dplPassYear;
+	}
+	public Integer getDplBacklogs() {
+		return dplBacklogs;
+	}
+	public void setDplBacklogs(Integer dplBacklogs) {
+		this.dplBacklogs = dplBacklogs;
+	}
+	
+	@Column(length = 100)
+	public String getDgrUni() {
+		return dgrUni;
+	}
+	public void setDgrUni(String dgrUni) {
+		this.dgrUni = dgrUni;
+	}
+	
+	@Column(length = 100)
+	public String getDgrclg() {
+		return dgrclg;
+	}
+	public void setDgrclg(String dgrclg) {
+		this.dgrclg = dgrclg;
+	}
+	
+	
+	public double getSem1PerDgr() {
+		return sem1PerDgr;
+	}
+	public void setSem1PerDgr(double sem1PerDgr) {
+		this.sem1PerDgr = sem1PerDgr;
+	}
+	
+	
+	public double getSem2PerDgr() {
+		return sem2PerDgr;
+	}
+	public void setSem2PerDgr(double sem2PerDgr) {
+		this.sem2PerDgr = sem2PerDgr;
+	}
+	
+	
+	public double getSem3PerDgr() {
+		return sem3PerDgr;
+	}
+	public void setSem3PerDgr(double sem3PerDgr) {
+		this.sem3PerDgr = sem3PerDgr;
+	}
+	
+	
+	public double getSem4PerDgr() {
+		return sem4PerDgr;
+	}
+	public void setSem4PerDgr(double sem4PerDgr) {
+		this.sem4PerDgr = sem4PerDgr;
+	}
+	
+	
+	public double getSem5PerDgr() {
+		return sem5PerDgr;
+	}
+	public void setSem5PerDgr(double sem5PerDgr) {
+		this.sem5PerDgr = sem5PerDgr;
+	}
+	
+	
+	public double getSem6PerDgr() {
+		return sem6PerDgr;
+	}
+	public void setSem6PerDgr(double sem6PerDgr) {
+		this.sem6PerDgr = sem6PerDgr;
+	}
+	
+	
+	public double getSem7PerDgr() {
+		return sem7PerDgr;
+	}
+	public void setSem7PerDgr(double sem7PerDgr) {
+		this.sem7PerDgr = sem7PerDgr;
+	}
+	
+	
+	public double getSem8PerDgr() {
+		return sem8PerDgr;
+	}
+	public void setSem8PerDgr(double sem8PerDgr) {
+		this.sem8PerDgr = sem8PerDgr;
+	}
+	
+	
+	public double getDgrPer() {
+		return dgrPer;
+	}
+	public void setDgrPer(double dgrPer) {
+		this.dgrPer = dgrPer;
+	}
+	
+	
+	public Integer getDgrPassYr() {
+		return dgrPassYr;
+	}
+	public void setDgrPassYr(Integer dgrPassYr) {
+		this.dgrPassYr = dgrPassYr;
+	}
+	
+	
+	public Integer getDgrBacklogs() {
+		return dgrBacklogs;
+	}
+	public void setDgrBacklogs(Integer dgrBacklogs) {
+		this.dgrBacklogs = dgrBacklogs;
+	}
+	
+	
+	public Integer getYrGap() {
+		return yrGap;
+	}
+	public void setYrGap(Integer yrGap) {
+		this.yrGap = yrGap;
+	}
+	
+ 
+	
+	
+	
+}

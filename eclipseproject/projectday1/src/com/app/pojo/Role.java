@@ -1,5 +1,5 @@
 package com.app.pojo;
 
 public enum Role {
-
+ANGULERDEVELOPER,FRONTENDDEVELOPER,DOTNETDEVELOPER,TESTER,BACKEND
 }

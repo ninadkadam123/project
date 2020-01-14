@@ -1,0 +1,108 @@
+package com.app.pojo;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.*;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "company")
+public class Company {
+	private Integer cid;
+	private String cname,street,city,disrtict,state,contact;
+    private List<Job> jobs=new ArrayList<>();
+	public Company()
+	{
+		
+	}
+    
+	@id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	public Integer getCid() {
+		return cid;
+	}
+
+	public void setCid(Integer cid) {
+		this.cid = cid;
+	}
+
+	public String getCname() {
+		return cname;
+	}
+
+	public void setCname(String cname) {
+		this.cname = cname;
+	}
+
+	public String getStreet() {
+		return street;
+	}
+
+	public void setStreet(String street) {
+		this.street = street;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public String getDisrtict() {
+		return disrtict;
+	}
+
+	public void setDisrtict(String disrtict) {
+		this.disrtict = disrtict;
+	}
+
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
+	public String getContact() {
+		return contact;
+	}
+
+	public void setContact(String contact) {
+		this.contact = contact;
+	}
+    
+	@OneToMany( mappedBy = "company",cascade = CascadeType.ALL,orphanRemoval = true)
+	public List<Job> getJobs() {
+		return jobs;
+	}
+
+	public void setJobs(List<Job> jobs) {
+		this.jobs = jobs;
+	}
+	
+	public void addJob(Job job)
+	{
+		jobs.add(job);
+		job.setCompany(this);
+	}
+    
+	public void removeJob(Job job)
+	{
+		jobs.remove(job);
+		job.setCompany(null);
+	}
+
+	@Override
+	public String toString() {
+		return "Company [cid=" + cid + ", cname=" + cname + ", street=" + street + ", city=" + city + ", disrtict="
+				+ disrtict + ", state=" + state + ", contact=" + contact + ", jobs=" + jobs + "]";
+	}
+	
+	
+}

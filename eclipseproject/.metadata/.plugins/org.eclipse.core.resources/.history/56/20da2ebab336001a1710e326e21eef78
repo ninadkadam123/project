@@ -1,0 +1,164 @@
+package com.app.pojo;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name = "job_profile")
+public class Job {
+	
+	private Integer jid;
+	private String name,description,skill1,skill2,skill3,skill4,skill5,skill6,skill7,skill8,skill9,skill10,jobLocation;
+	private double packages;
+	private Role role;
+	private List<Application> applications=new ArrayList<>();
+	
+	Job(){}
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	public Integer getJid() {
+		return jid;
+	}
+
+	public void setJid(Integer jid) {
+		this.jid = jid;
+	}
+    @Column(length = 20)
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+    @Column(length = 1000)
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+     
+	@Column(length = 20)
+	public String getSkill1() {
+		return skill1;
+	}
+	public void setSkill1(String skill1) {
+		this.skill1 = skill1;
+	}
+	
+	@Column(length = 20)
+	public String getSkill2() {
+		return skill2;
+	}
+	public void setSkill2(String skill2) {
+		this.skill2 = skill2;
+	}
+	
+	@Column(length = 20)
+	public String getSkill3() {
+		return skill3;
+	}
+	public void setSkill3(String skill3) {
+		this.skill3 = skill3;
+	}
+	
+	@Column(length = 20)
+	public String getSkill4() {
+		return skill4;
+	}
+	
+	@Column(length = 20)
+	public void setSkill4(String skill4) {
+		this.skill4 = skill4;
+	}
+	
+	@Column(length = 20)
+	public String getSkill5() {
+		return skill5;
+	}
+	public void setSkill5(String skill5) {
+		this.skill5 = skill5;
+	}
+	
+	@Column(length = 20)
+	public String getSkill6() {
+		return skill6;
+	}
+	public void setSkill6(String skill6) {
+		this.skill6 = skill6;
+	}
+	
+	@Column(length = 20)
+	public String getSkill7() {
+		return skill7;
+	}
+	public void setSkill7(String skill7) {
+		this.skill7 = skill7;
+	}
+	
+	@Column(length = 20)
+	public String getSkill8() {
+		return skill8;
+	}
+	public void setSkill8(String skill8) {
+		this.skill8 = skill8;
+	}
+	
+	@Column(length = 20)
+	public String getSkill9() {
+		return skill9;
+	}
+	public void setSkill9(String skill9) {
+		this.skill9 = skill9;
+	}
+	
+	@Column(length = 20)
+	public String getSkill10() {
+		return skill10;
+	}
+	public void setSkill10(String skill10) {
+		this.skill10 = skill10;
+	}
+	
+	@Column(length = 20)
+	public String getJobLocation() {
+		return jobLocation;
+	}
+
+	public void setJobLocation(String jobLocation) {
+		this.jobLocation = jobLocation;
+	}
+
+	public double getPackages() {
+		return packages;
+	}
+
+	public void setPackages(double packages) {
+		this.packages = packages;
+	}
+    
+	@Enumerated(EnumType.STRING)
+	@Column(name = "role",length = 20)
+	public Role getRole() {
+		return role;
+	}
+
+	public void setRole(Role role) {
+		this.role = role;
+	}
+	
+	@OneToMany(mappedBy = "job",cascade = CascadeType.ALL)
+	public List<Application> getApplications() {
+		return applications;
+	}
+	public void setApplications(List<Application> applications) {
+		this.applications = applications;
+	}
+	
+	
+
+}

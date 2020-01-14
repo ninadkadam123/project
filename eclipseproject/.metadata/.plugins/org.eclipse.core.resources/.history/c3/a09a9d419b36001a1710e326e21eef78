@@ -1,0 +1,11 @@
+package com.app.pojo;
+
+public class Qualification {
+	private String tenBoard,tenSchool;
+	private double tenPercentage;
+	private Integer tenPassingYear;
+	private String twelveBoard,twelveCollege;
+	private double percentage;
+	private Integer year;
+
+}

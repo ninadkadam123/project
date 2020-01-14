@@ -1,0 +1,86 @@
+package com.app.pojo;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+
+public class Company {
+	private Integer cid;
+	private String cname,street,city,disrtict,state,contact;
+    private List<Job> jobs=new ArrayList<>();
+	public Company()
+	{
+		
+	}
+
+	public Integer getCid() {
+		return cid;
+	}
+
+	public void setCid(Integer cid) {
+		this.cid = cid;
+	}
+
+	public String getCname() {
+		return cname;
+	}
+
+	public void setCname(String cname) {
+		this.cname = cname;
+	}
+
+	public String getStreet() {
+		return street;
+	}
+
+	public void setStreet(String street) {
+		this.street = street;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public String getDisrtict() {
+		return disrtict;
+	}
+
+	public void setDisrtict(String disrtict) {
+		this.disrtict = disrtict;
+	}
+
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
+	public String getContact() {
+		return contact;
+	}
+
+	public void setContact(String contact) {
+		this.contact = contact;
+	}
+    
+	@OneToMany( mappedBy = "company",cascade = CascadeType.ALL,orphanRemoval = true)
+	public List<Job> getJobs() {
+		return jobs;
+	}
+
+	public void setJobs(List<Job> jobs) {
+		this.jobs = jobs;
+	}
+	
+	
+
+}
