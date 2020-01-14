@@ -1,0 +1,12 @@
+package com.app.pojo;
+
+public class Application {
+	private Integer aid;
+	private String status,jobLocation;
+	
+	Application()
+	{}
+	
+	
+
+}

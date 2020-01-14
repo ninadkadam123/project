@@ -1,0 +1,8 @@
+package com.app.pojo;
+
+public class User {
+
+	private String email,password;
+	private UserType userType;
+	
+}

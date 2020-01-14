@@ -1,0 +1,126 @@
+@startuml
+
+entity Student  {
+  + sid (PK)
+  --
+  name 
+  gender
+  mob no
+  street
+  city
+  district
+  state
+  skill1
+  skill2
+  skill3
+  skill4
+  skill5
+  image
+  DOB
+  passport_number
+  status
+  
+  # email (FK)(User)
+}
+
+entity Company  {
+  + cid (PK)
+  --
+  cname
+  street
+  city
+  district
+  state
+  contact
+  
+  # application_id (FK)(Application)
+  # email (Fk)(User)
+}
+
+entity Application{
+  + application_id(PK)
+  --
+  status
+  job_location
+ # student_id(FK)(Student)
+ # Job_id(FK)(Job)
+
+}
+
+
+entity Qualification
+{
+  10th_Board
+  10th_School
+  10th_percentage
+  10th_year_of_passing
+  12th_Board
+  12th_College
+  12th_percentage
+  12th_year_of_passing
+  diploma_univercity
+  diploma_college
+  1st sem_diploma_percentage
+  2nd sem_diploma_percentage
+  3rd sem_diploma_percentage
+  4th_sem_diploma_percentage
+  5th_sem_diploma_percentage
+  6th_sem_diploma_percentage
+  diploma_percentage
+  diploma_year_of_passing
+  diploma_backlogs
+  univercity
+  degree_college
+  1st_sem_degre_percentage
+  2nd_sem_degree_percentsge
+  3rd_sem_degree_percentage
+  4th_sem_degree_percentage
+  5th_sem_degree_percentage
+  6th_sem_degree_percentage
+  7th_sem_degree_percentage
+  8th_sem_degree_percentage
+  Degree_percentage
+  Degree_grade
+  degree_passing_year
+  year_gap
+  degree_backlogs 
+  
+  
+}
+
+entity User{
+  + email (PK)
+  --
+  password
+  userType
+  
+}
+
+entity Job{
+  + jid (PK)
+ --
+  name
+  job_description
+  job_profile
+  package
+  skillrequired_1
+  skillrequired_2
+  skill_required_3
+  skill_required_4
+  skill_required_5
+  skill_required_6
+  skill_required_7
+  skill_required_8
+  skill_required_9
+  skill_required_10
+  # cid (FK)(Company)
+}
+
+Student -left-Qualification
+Student -right-o{ Application
+Company -left-o{ Job
+Job -left-o{ Application
+User -down-Student
+User -down-Company
+
+@enduml

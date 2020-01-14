@@ -1,0 +1,2 @@
+INDEX VERSION 1.4+/home/sunbeam/ninad_dac/project/eclipseproject/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+3604032713.index

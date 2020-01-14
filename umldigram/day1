@@ -1,0 +1,83 @@
+
+  10th percentage
+  10th year of passing
+  12th percentage
+  12 th year of passing
+  1st sem percentage
+  2nd sem percentsge
+  3rd sem percentage
+  4th sem percentage@startuml
+
+entity Student  {
+  + sid (PK)
+  --
+  name
+  email
+  password
+  gender
+  street
+  city
+  district
+  state
+  skill1
+  skill2
+  skill3
+  image
+  DOB
+  status
+}
+
+entity Company  {
+  + cid (PK)
+  --
+  cname
+  street
+  city
+  district
+  state
+  contact
+  
+  # Application id (FK)
+ 
+}
+
+entity Application{
+  + application_id(PK)
+  --
+  status
+ # student_id(FK)
+ # Job_id(FK)
+
+}
+
+
+entity Qualification
+{
+  5th sem percentage
+  6th sem percentage
+  7th sem percentage
+  8th sem percentage
+  Aggregate
+  passing year
+  year gap
+  
+  
+}
+
+entity Job{
+  + jid (PK)
+ --
+  name
+  description
+  role
+  package
+  skills required
+  # cid (FK)
+}
+
+Student -left-Qualification
+Student -right-o{ Application
+Company -left-o{ Job
+Job -left-o{ Application
+
+@enduml

@@ -1,0 +1,12 @@
+package com.app.pojo;
+
+public class Company {
+	private Integer cid;
+	private String cname,street,city,disrtict,state,contact;
+   
+	public Company()
+	{
+		
+	}
+
+}

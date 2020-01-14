@@ -1,0 +1,10 @@
+package com.app.pojo;
+
+public class Job {
+	
+	private Integer jid;
+	private String name,description,skills;
+	private double packages;
+	private 
+
+}

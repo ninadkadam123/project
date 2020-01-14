@@ -1,0 +1,21 @@
+package com.app.pojo;
+
+import java.util.Date;
+
+public class Student {
+
+	private Integer sid;
+	private String name,email,password,gender,street,city,district,state,skill1,skill2,skill3,status;
+	private Date Dob;
+	private byte[] image;
+	
+	public Student() {
+		
+	}
+	
+	
+	
+	
+	
+	
+}
